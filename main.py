@@ -26,7 +26,7 @@ while i < year:
             invest_base = capital + investment_inj
         int_month = invest_base * interest_rate * 0.01
         capital =  invest_base + int_month
-        print("|   ", month,  "|   ",  invest_base, "|   ", int_month, "|   ",capital,   "|")
+        print("|   ", month,  "   |  ",  round(invest_base, 2), "|   ", int_month, "|   ",capital,   "|")
 
     print("-----------------------------------------------")
 
