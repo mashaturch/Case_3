@@ -4,31 +4,30 @@
 #               Zubareva T. (%).
 # This program allows to calculate the amount of capital on the bank deposit after a certain number of years
 
-year = int (input ("Введите срок размещения капитала (лет) "))
-capital_rate = float (input ("Введите начальный капитал ($) "))
-interest_rate = int (input ("Введите процентную ставку (%/мес.) "))
-investment_injection = int (input ("Введите инвестиционные вливания ($/мес.) "))
+year = int(input("Введите срок размещения капитала (лет) "))
+capital_rate = float(input("Введите начальный капитал ($) "))
+interest_rate = int(input("Введите процентную ставку (%/мес.) "))
+investment_inj = int(input("Введите инвестиционные вливания ($/мес.) "))
 i = 0
 month = 0
+capital = 0
 while i < year:
     i += 1
+    month += 1
     print(i, "год")
     print("----------------------------------------------")
     print("|         |   основа   |  сумма %  |          |")
     print("|  месяц  | инвестиций | за месяц  | капитал  |")
     print("-----------------------------------------------")
-    print("|    1    |            |           |          |")
-    print("|    2    |            |           |          |")
-    print("|    3    |            |           |          |")
-    print("|    4    |            |           |          |")
-    print("|    5    |            |           |          |")
-    print("|    6    |            |           |          |")
-    print("|    7    |            |           |          |")
-    print("|    8    |            |           |          |")
-    print("|    9    |            |           |          |")
-    print("|    10   |            |           |          |")
-    print("|    11   |            |           |          |")
-    print("|    12   |            |           |          |")
+    for month in range (1,13):
+        if month == 1 and i == 1:
+            invest_base = capital_rate
+        else:
+            invest_base = capital + investment_inj
+        int_month = invest_base * interest_rate * 0.01
+        capital =  invest_base + int_month
+        print("|   ", month,  "|   ",  invest_base, "|   ", int_month, "|   ",capital,   "|")
+
     print("-----------------------------------------------")
 
 
