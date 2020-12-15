@@ -6,3 +6,4 @@
 
 year = int (input ())
 capital_rate = int (input ())
+interest_rate = int (input ())
