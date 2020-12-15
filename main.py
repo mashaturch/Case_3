@@ -4,6 +4,7 @@
 #               Zubareva T. (%).
 # This program allows to calculate annual tax of the subject of taxation on American system.
 
-year = int (input ())
-capital_rate = int (input ())
-interest_rate = int (input ())
+year = int (input ("Введите срок размещения капитала (лет)"))
+capital_rate = int (input ("Введите начальный капитал ($)"))
+interest_rate = int (input ("Введите процентную ставку (%/мес.)))
+investment_injection = int (input ("Введите инвестиционные вливания ($/мес.))
