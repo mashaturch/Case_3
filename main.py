@@ -25,8 +25,31 @@ while i < year:
         else:
             invest_base = capital + investment_inj
         int_month = invest_base * interest_rate * 0.01
-        capital =  invest_base + int_month
-        print("|   ", month,  "   |  ",  round(invest_base, 2), "|   ", round(int_month, 2), "|   ", round(capital, 2),   "|")
+        capital = invest_base + int_month
+        print ('|', end = '')
+        for j in range (1, 6 - len (str (month))):
+            print (' ', end ='')
+        print (month, end = '')
+        for j in range (1,5):
+            print (' ', end = '')
+        print ('|', end = '')
+        if len (str (round(invest_base, 2))) > 7:
+            print ('', end = '')
+        else:
+            print (' ', end = '')
+        print (round(invest_base, 2), end = '')
+        if len (str (round(invest_base, 2))) <= 7:
+            print ('    |', end = '')
+        elif len (str (round(invest_base, 2))) == 8:
+            print ('   |', end = '')
+        elif len (str (round(invest_base, 2))) == 9:
+            print ('  |', end = '')
+        elif len(str(round(invest_base, 2))) == 10:
+            print (' |', end = '')
+        else:
+            print ('|', end = '')
+
+        print("   ", round(int_month, 2), "|   ", round(capital, 2),   "|")
 
     print("-----------------------------------------------")
 
