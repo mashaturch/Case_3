@@ -15,7 +15,7 @@ while i < year:
     i += 1
     month += 1
     print(i, "год")
-    print("----------------------------------------------")
+    print("-----------------------------------------------")
     print("|         |   основа   |  сумма %  |          |")
     print("|  месяц  | инвестиций | за месяц  | капитал  |")
     print("-----------------------------------------------")
@@ -26,7 +26,7 @@ while i < year:
             invest_base = capital + investment_inj
         int_month = invest_base * interest_rate * 0.01
         capital =  invest_base + int_month
-        print("|   ", month,  "   |  ",  round(invest_base, 2), "|   ", int_month, "|   ",capital,   "|")
+        print("|   ", month,  "   |  ",  round(invest_base, 2), "|   ", round(int_month, 2), "|   ", round(capital, 2),   "|")
 
     print("-----------------------------------------------")
 
