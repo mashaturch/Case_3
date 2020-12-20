@@ -38,8 +38,10 @@ while i < year:
         else:
             print (' ', end = '')
         print (round(invest_base, 2), end = '')
-        if len (str (round(invest_base, 2))) <= 7:
+        if len (str (round(invest_base, 2))) == 6:
             print ('    |', end = '')
+        if len (str (round(invest_base, 2))) == 7:
+            print ('   |', end = '')
         elif len (str (round(invest_base, 2))) == 8:
             print ('   |', end = '')
         elif len (str (round(invest_base, 2))) == 9:
